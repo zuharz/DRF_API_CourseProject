@@ -1,0 +1,3 @@
+superuser credentials below
+login: admin
+password: 123#!
