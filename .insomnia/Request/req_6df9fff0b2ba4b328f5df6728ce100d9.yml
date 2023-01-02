@@ -1,0 +1,32 @@
+_id: req_6df9fff0b2ba4b328f5df6728ce100d9
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658812
+created: 1672657658812
+url: "{{ _.basePath }}/api/groups/manager/users"
+name: Assigns user to the manager group (as Admin)
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_1ef3aa56057a4cbb9a4717d513df1e51
+      name: user_id
+      value: "5"
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+authentication:
+  type: bearer
+  token: "{{ _.adminAuthToken }}"
+  prefix: Token
+metaSortKey: -1672418578293.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

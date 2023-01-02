@@ -1,0 +1,10 @@
+_id: ut_9673a2fb52244fdcbd79bcc7736402eb
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672657929710
+created: 1672657658828
+requestId: req_7aff9e7271d448a1aff0e88e0fae52be
+name: Can login as Manager
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

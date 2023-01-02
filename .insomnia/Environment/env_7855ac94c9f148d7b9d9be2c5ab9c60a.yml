@@ -1,0 +1,37 @@
+_id: env_7855ac94c9f148d7b9d9be2c5ab9c60a
+type: Environment
+parentId: env_39135a9fce1940628bdf41154952fb69
+modified: 1672657658798
+created: 1672657658798
+name: LittleLemonAPI
+data:
+  basePath: http://127.0.0.1:8000
+  baseAuthPath: auth
+  adminUsername: admin
+  adminPassword: 123#!
+  adminAuthToken: "{% response 'body', 'req_c40059e0804b46b3a24aabb6db5d7783',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+  managerUsername: manager
+  managerPassword: 12345678#!
+  managerAuthToken: "{% response 'body', 'req_5526ce1d872c4f58a2717bb3e48c3c27',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+  customerUsername: customer1
+  customerPassword: 12345678#!
+  customerAuthToken: "{% response 'body', 'req_031fa56ea4ac4cd0a9b9f622dac74876',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+dataPropertyOrder:
+  "&":
+    - basePath
+    - baseAuthPath
+    - adminUsername
+    - adminPassword
+    - adminAuthToken
+    - managerUsername
+    - managerPassword
+    - managerAuthToken
+    - customerUsername
+    - customerPassword
+    - customerAuthToken
+color: null
+isPrivate: false
+metaSortKey: 1672319913396

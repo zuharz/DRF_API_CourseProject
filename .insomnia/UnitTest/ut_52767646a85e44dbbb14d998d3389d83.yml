@@ -1,0 +1,10 @@
+_id: ut_52767646a85e44dbbb14d998d3389d83
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672658003394
+created: 1672657658831
+requestId: req_9368022de79f4a44af65129c4622cca4
+name: Can list delivery crew as Manager
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

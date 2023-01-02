@@ -1,0 +1,26 @@
+_id: req_f6aef3d11ee040eabb165d8994699050
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658817
+created: 1672657658817
+url: "{{ _.basePath }}/token/login"
+name: Login As Customer
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: '{"username": "{{ _.customerUsername }}", "password": "{{
+    _.customerPassword }}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1672418612925.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

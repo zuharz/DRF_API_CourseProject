@@ -1,0 +1,10 @@
+_id: ut_4445b3a66b5a4a1f95484875eb2829ba
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672657958651
+created: 1672657658832
+requestId: req_37127f8050cd4c4bb7f237d410b0dc36
+name: Can't list delivery crew as Customer
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(403);

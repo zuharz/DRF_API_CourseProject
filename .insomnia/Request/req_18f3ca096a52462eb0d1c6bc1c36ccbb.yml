@@ -1,0 +1,24 @@
+_id: req_18f3ca096a52462eb0d1c6bc1c36ccbb
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658810
+created: 1672657658810
+url: "{{ _.basePath }}/api/groups/manager/users"
+name: Returns all managers (as Admin)
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.adminAuthToken }}"
+metaSortKey: -1672418612913
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,24 @@
+_id: req_37127f8050cd4c4bb7f237d410b0dc36
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658818
+created: 1672657658818
+url: "{{ _.basePath }}/api/groups/delivery-crew/users"
+name: "Delivery crew: List All (as Customer)"
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{{ _.customerAuthToken }}"
+  prefix: Token
+metaSortKey: -1672393781758.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

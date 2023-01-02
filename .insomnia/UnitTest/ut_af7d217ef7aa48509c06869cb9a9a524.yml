@@ -1,0 +1,10 @@
+_id: ut_af7d217ef7aa48509c06869cb9a9a524
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672657980719
+created: 1672657658834
+requestId: req_e37251019a8d46bba6c7c0ae628c5084
+name: Can't create Menu Item as Customer
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(403);

@@ -1,0 +1,31 @@
+_id: req_cb6d0f35d3c14118ab9ce4b124c46384
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658820
+created: 1672657658820
+url: "{{ _.basePath }}/api/users/"
+name: Create New User
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username":
+    		"SampleUser",
+    	"password":
+    		"{{ _.customerPassword }}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1672655311990
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
