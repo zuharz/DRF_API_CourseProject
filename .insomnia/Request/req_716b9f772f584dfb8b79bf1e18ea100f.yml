@@ -1,0 +1,32 @@
+_id: req_716b9f772f584dfb8b79bf1e18ea100f
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658807
+created: 1672657658807
+url: "{{ _.basePath }}/api/users/me/"
+name: User Details by Token
+description: ""
+method: GET
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_5e6eece6e8c4414481ed429e516a5714
+      name: ""
+      value: ""
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+authentication:
+  type: bearer
+  token: "{{ _.managerAuthToken }}"
+  prefix: Token
+metaSortKey: -1672418612919.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

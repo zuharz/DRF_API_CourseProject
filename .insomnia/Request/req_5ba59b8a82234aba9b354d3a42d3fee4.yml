@@ -1,0 +1,35 @@
+_id: req_5ba59b8a82234aba9b354d3a42d3fee4
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658822
+created: 1672657658822
+url: "{{ _.basePath }}/api/menu-items"
+name: "Menu Item: Create (as Manager)"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "Caesar Salad by {{ _.managerUsername }}",
+    	"price": "7",
+    	"featured": false,
+    	"category_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.managerAuthToken }}"
+  prefix: Token
+  disabled: false
+metaSortKey: -1672381400750.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

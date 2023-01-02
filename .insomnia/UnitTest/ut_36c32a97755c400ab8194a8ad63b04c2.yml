@@ -1,0 +1,12 @@
+_id: ut_36c32a97755c400ab8194a8ad63b04c2
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672657925738
+created: 1672657658826
+requestId: req_4827f7db92c343888cb10861bf377ec6
+name: Can login as Admin
+code: |-
+  const response1 = await insomnia.send();
+  //var body = JSON.parse(response1.data);
+  //alert(body.auth_token);
+  expect(response1.status).to.equal(200);

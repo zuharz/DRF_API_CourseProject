@@ -1,0 +1,10 @@
+_id: ut_30f7757c9ba64c55bac0c4f01f057374
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672658827091
+created: 1672657658833
+requestId: req_2e53549cc3e5410aa8b545f1fc4186bc
+name: Can create Menu Item by Admin
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

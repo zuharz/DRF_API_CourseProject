@@ -1,0 +1,35 @@
+_id: req_e37251019a8d46bba6c7c0ae628c5084
+type: Request
+parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
+modified: 1672657658823
+created: 1672657658823
+url: "{{ _.basePath }}/api/menu-items"
+name: "Menu Item: Create (as Customer or Del.Crew)"
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"title": "Caesar Salad by {{ _.customerUsername }}",
+    	"price": "7",
+    	"featured": false,
+    	"category_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  token: "{{ _.customerAuthToken }}"
+  prefix: Token
+  disabled: false
+metaSortKey: -1672381400700.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
