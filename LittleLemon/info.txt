@@ -1,3 +1,5 @@
 superuser credentials below
 login: admin
 password: 123#!
+
+admin user API token: 4e5fc96775e202cc44694e89ad091f90a43140ba

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'rest_framework.authtoken', #required for enabling token-based authentication
     'djoser',#(!)keep after rest_framework.authtoken
     'LittleLemonAPI',
@@ -53,6 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'LittleLemon.urls'
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 TEMPLATES = [
     {
@@ -145,12 +152,15 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/minute',
-        'user': '10/minute',
+        'anon': '15/minute',
+        'user': '30/minute',
         'customCallsPerMinute' : '3/minute',
     }
 }
 
 DJOSER = {
-    'USER_ID_FIELD' : 'username'
+    'USER_ID_FIELD' : 'id'
 }
+
+LEMON_GROUP_MANAGER = "Manager"
+LEMON_GROUP_DELIVERY = "Delivery crew"
