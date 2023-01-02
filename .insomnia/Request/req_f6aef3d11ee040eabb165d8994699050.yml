@@ -1,7 +1,7 @@
 _id: req_f6aef3d11ee040eabb165d8994699050
 type: Request
-parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658817
+parentId: fld_5dc5d2004f62453a99564703763d8b2f
+modified: 1672674457260
 created: 1672657658817
 url: "{{ _.basePath }}/token/login"
 name: Login As Customer
@@ -16,7 +16,7 @@ headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1672418612925.5
+metaSortKey: -1672418612938
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

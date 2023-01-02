@@ -1,0 +1,25 @@
+_id: req_bdaa7b29a162432bb3e57dcbfd7b0f44
+type: Request
+parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
+modified: 1672682924914
+created: 1672676557930
+url: "{{ _.basePath }}/api/cart/menu-items"
+name: Cart List by Customer
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.customerAuthToken }}"
+  disabled: false
+metaSortKey: -1672678794912.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

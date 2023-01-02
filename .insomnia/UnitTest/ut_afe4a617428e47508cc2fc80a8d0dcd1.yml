@@ -1,0 +1,10 @@
+_id: ut_afe4a617428e47508cc2fc80a8d0dcd1
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672683398249
+created: 1672683386731
+requestId: req_b7dd73dbcbdc4888896482a20601664c
+name: Can Add Item To Cart (Customer)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

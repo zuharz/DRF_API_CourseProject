@@ -1,0 +1,28 @@
+_id: req_0501f16847ab4b0a941c15433cbadb4c
+type: Request
+parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
+modified: 1672684477952
+created: 1672681020012
+url: "{{ _.basePath }}/api/cart/menu-items"
+name: Cart Delete Items by Customer
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.customerAuthToken }}"
+metaSortKey: -1672678794894
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
