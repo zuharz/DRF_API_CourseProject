@@ -1,21 +1,17 @@
-_id: req_245b6ac2da2b40ada5d857067b56908e
+_id: req_ceab5e6e646d45a0b7f6354349c58005
 type: Request
 parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658824
-created: 1672657658824
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: Create (as Anon)"
+modified: 1672674226658
+created: 1672669277880
+url: "{{ _.basePath }}/api/menu-items/{% response 'body',
+  'req_e5ac93cbca024098a48ec5a0922fc466', 'b64::JC5yZXN1bHRzWzBdLmlk::46b',
+  'always', 60 %}"
+name: "Menu Item: Delete (as Manager)"
 description: ""
-method: POST
+method: DELETE
 body:
   mimeType: application/json
-  text: |-
-    {
-    	"title": "Caesar Salad by Anonumous",
-    	"price": "7",
-    	"featured": false,
-    	"category_id": 1
-    }
+  text: ""
 parameters: []
 headers:
   - name: Content-Type
@@ -24,8 +20,8 @@ authentication:
   type: bearer
   token: "{{ _.managerAuthToken }}"
   prefix: Token
-  disabled: true
-metaSortKey: -1672381400650.75
+  disabled: false
+metaSortKey: -1672381400725.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

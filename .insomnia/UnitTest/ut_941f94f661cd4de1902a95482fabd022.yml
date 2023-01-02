@@ -1,0 +1,13 @@
+_id: ut_941f94f661cd4de1902a95482fabd022
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672684432020
+created: 1672683468191
+requestId: req_bdaa7b29a162432bb3e57dcbfd7b0f44
+name: Can View Cart Items (Customer)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
+
+  const body = JSON.parse(response1.data);
+  expect(body.length).to.be.at.least(1);

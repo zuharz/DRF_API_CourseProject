@@ -1,0 +1,34 @@
+_id: req_b7dd73dbcbdc4888896482a20601664c
+type: Request
+parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
+modified: 1672684485775
+created: 1672676983698
+url: "{{ _.basePath }}/api/cart/menu-items"
+name: Cart Add Item by Customer
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"menuitem": {% response 'body', 'req_5ba59b8a82234aba9b354d3a42d3fee4', 'b64::JC5pZA==::46b', 'always', 60 %},
+    	"quantity": 2,
+    	"unit_price": 2.25
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.customerAuthToken }}"
+  disabled: false
+metaSortKey: -1672678794931.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,10 +1,15 @@
 _id: ut_d432b1d4ddad472cb6414ee07c03175a
 type: UnitTest
 parentId: uts_3bdae35be22c49e6ae638d4e831e522c
-modified: 1672658844730
+modified: 1672669523036
 created: 1672657658834
 requestId: req_5ba59b8a82234aba9b354d3a42d3fee4
 name: Can create Menu Item by Manager
-code: |-
+code: >-
   const response1 = await insomnia.send();
-  expect(response1.status).to.equal(201);
+
+  expect(response1.status).to.equal(201)
+
+  /*const response2 = await insomnia.send('req_ceab5e6e646d45a0b7f6354349c58005');
+
+  expect(response2.status).to.equal(200);*/

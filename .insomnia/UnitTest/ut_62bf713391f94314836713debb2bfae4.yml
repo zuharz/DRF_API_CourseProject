@@ -1,0 +1,10 @@
+_id: ut_62bf713391f94314836713debb2bfae4
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672674398531
+created: 1672673195436
+requestId: req_ceab5e6e646d45a0b7f6354349c58005
+name: Can delete Menu Item by Manager
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(204);

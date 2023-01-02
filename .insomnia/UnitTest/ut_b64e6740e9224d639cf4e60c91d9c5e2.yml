@@ -1,0 +1,10 @@
+_id: ut_b64e6740e9224d639cf4e60c91d9c5e2
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1672684470059
+created: 1672684465918
+requestId: req_0501f16847ab4b0a941c15433cbadb4c
+name: Can Delete Cart Items (Customer)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
