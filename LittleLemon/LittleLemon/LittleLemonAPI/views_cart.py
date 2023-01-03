@@ -12,7 +12,7 @@ from .serializers import CartSerializer
 
 class CartItemsView(APIView):
     permission_classes = (IsCustomerUser,)
-    # /api/cart/menu-items -> Returns current items in the cart for the current user token
+    # Returns current items in the cart for the current user token
     def get(self, request: Request, format=None):
         
         queryset = Cart.objects.filter(user = request.user)
@@ -20,7 +20,7 @@ class CartItemsView(APIView):
         
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    # /api/cart/menu-items -> Adds the menu item to the cart. Sets the authenticated user as the user id for these cart items
+    # Adds the menu item to the cart. Sets the authenticated user as the user id for these cart items
     def post(self, request, format=None):
         try:
             serializer = CartSerializer(data=request.data, context={'request': request})
@@ -30,23 +30,25 @@ class CartItemsView(APIView):
         except IntegrityError as e:
             return Response(f"Can't add items to the cart due to the error {e}", status.HTTP_400_BAD_REQUEST)
     
-    # /api/cart/menu-items -> Deletes all menu items created by the current user token
+    # Deletes all menu items created by the current user token
     def delete(self, request):
-        # Retrieve the user from the request payload
-        cartItems = Cart.objects.filter(user = request.user)
-        
-        itemsToDelete = cartItems.count()
-        if(itemsToDelete == 0):
-            return Response(f"Not items for {request.user.username} in the cart to delete", status.HTTP_200_OK)
-        
-        for cItem in cartItems:
-            cItem.delete()
+        try:
+            cartItems = Cart.objects.filter(user = request.user)
+            
+            itemsToDelete = cartItems.count()
+            if(itemsToDelete == 0):
+                return Response(f"Not items for {request.user.username} in the cart to delete", status.HTTP_200_OK)
+            
+            for cItem in cartItems:
+                cItem.delete()
 
-        jsonResponse = json.dumps(
-            {
-                'items_deleted': itemsToDelete,
-                'user': request.user.username
-            }
-        )
-        
-        return Response(jsonResponse, status.HTTP_200_OK)
+            jsonResponse = json.dumps(
+                {
+                    'items_deleted': itemsToDelete,
+                    'user': request.user.username
+                }
+            )
+            
+            return Response(jsonResponse, status.HTTP_200_OK)
+        except Exception as e:
+            return Response(f"Can't delete items due to the error {e}", status.HTTP_500_INTERNAL_SERVER_ERROR)
