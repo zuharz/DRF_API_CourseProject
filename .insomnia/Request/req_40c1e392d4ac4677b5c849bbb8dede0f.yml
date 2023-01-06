@@ -1,0 +1,33 @@
+_id: req_40c1e392d4ac4677b5c849bbb8dede0f
+type: Request
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1673004530216
+created: 1672840449930
+url: "{{ _.basePath }}/api/orders/{% response 'body',
+  'req_c61da14711fc428cb8d88a1a397b7a59', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: Order Set Delivery Crew (as Manager)
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"delivery_crew": 9, 
+    	"status": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.managerAuthToken }}"
+metaSortKey: -1672728752166.8125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

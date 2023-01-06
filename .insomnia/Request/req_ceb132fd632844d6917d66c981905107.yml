@@ -1,0 +1,32 @@
+_id: req_ceb132fd632844d6917d66c981905107
+type: Request
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1673004508504
+created: 1673004362655
+url: "{{ _.basePath }}/api/orders/{% response 'body',
+  'req_c61da14711fc428cb8d88a1a397b7a59', 'b64::JC5pZA==::46b', 'never', 60 %}"
+name: Order Update to "Delivered" (as Delivery Crew)
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{{ _.deliveryAuthToken }}"
+metaSortKey: -1672723756443.2812
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

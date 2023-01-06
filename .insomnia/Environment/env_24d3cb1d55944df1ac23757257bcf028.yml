@@ -1,7 +1,7 @@
 _id: env_24d3cb1d55944df1ac23757257bcf028
 type: Environment
 parentId: env_39135a9fce1940628bdf41154952fb69
-modified: 1672674311552
+modified: 1672936592281
 created: 1672657819948
 name: LittleLemonDRF
 data:
@@ -14,6 +14,10 @@ data:
   managerUsername: manager
   managerPassword: 12345678#!
   managerAuthToken: "{% response 'body', 'req_5526ce1d872c4f58a2717bb3e48c3c27',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+  deliveryUsername: delivery
+  deliveryPassword: 12345678#!
+  deliveryAuthToken: "{% response 'body', 'req_3c11e7442e784fa2a35348b92825d8f4',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
   customerUsername: customer1
   customerPassword: 12345678#!
@@ -31,6 +35,9 @@ dataPropertyOrder:
     - managerUsername
     - managerPassword
     - managerAuthToken
+    - deliveryUsername
+    - deliveryPassword
+    - deliveryAuthToken
     - customerUsername
     - customerPassword
     - customerAuthToken

@@ -1,22 +1,22 @@
-_id: req_7aff9e7271d448a1aff0e88e0fae52be
+_id: req_3c11e7442e784fa2a35348b92825d8f4
 type: Request
 parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672985264116
-created: 1672657658815
+modified: 1672820504134
+created: 1672820488889
 url: "{{ _.basePath }}/token/login"
-name: Login As Manager
+name: Login As Delivery
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: '{"username": "{{ _.managerUsername }}", "password": "{{ _.managerPassword
-    }}"}'
+  text: '{"username": "{{ _.deliveryUsername }}", "password": "{{
+    _.customerPassword }}"}'
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1672418612913
+metaSortKey: -1672418612931.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

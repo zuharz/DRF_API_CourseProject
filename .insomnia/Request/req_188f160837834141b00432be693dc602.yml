@@ -1,10 +1,10 @@
-_id: req_18f3ca096a52462eb0d1c6bc1c36ccbb
+_id: req_188f160837834141b00432be693dc602
 type: Request
-parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672986212295
-created: 1672657658810
-url: "{{ _.basePath }}/api/groups/manager/users"
-name: Returns all managers (as Admin)
+parentId: fld_e7869b47681644239575ff3a4341d861
+modified: 1673003419173
+created: 1672992667264
+url: "{{ _.basePath }}/api/category"
+name: Category List All (Customer)
 description: ""
 method: GET
 body: {}
@@ -13,8 +13,8 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.adminAuthToken }}"
-metaSortKey: -1672418612813
+  token: "{{ _.customerAuthToken }}"
+metaSortKey: -1672992667264
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

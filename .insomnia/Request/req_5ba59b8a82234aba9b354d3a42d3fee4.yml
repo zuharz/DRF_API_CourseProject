@@ -1,7 +1,7 @@
 _id: req_5ba59b8a82234aba9b354d3a42d3fee4
 type: Request
-parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658822
+parentId: fld_e7869b47681644239575ff3a4341d861
+modified: 1673003258738
 created: 1672657658822
 url: "{{ _.basePath }}/api/menu-items"
 name: "Menu Item: Create (as Manager)"
@@ -12,9 +12,9 @@ body:
   text: |-
     {
     	"title": "Caesar Salad by {{ _.managerUsername }}",
-    	"price": "7",
+    	"price": "7.75",
     	"featured": false,
-    	"category_id": 1
+    	"category": 1
     }
 parameters: []
 headers:
@@ -25,7 +25,7 @@ authentication:
   token: "{{ _.managerAuthToken }}"
   prefix: Token
   disabled: false
-metaSortKey: -1672381400750.75
+metaSortKey: -1672381400775.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,7 +1,7 @@
 _id: req_b7dd73dbcbdc4888896482a20601664c
 type: Request
 parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
-modified: 1672684485775
+modified: 1672770936466
 created: 1672676983698
 url: "{{ _.basePath }}/api/cart/menu-items"
 name: Cart Add Item by Customer
@@ -12,8 +12,8 @@ body:
   text: >-
     {
     	"menuitem": {% response 'body', 'req_5ba59b8a82234aba9b354d3a42d3fee4', 'b64::JC5pZA==::46b', 'always', 60 %},
-    	"quantity": 2,
-    	"unit_price": 2.25
+    	"quantity": 3,
+    	"unit_price": 1.15
     }
 parameters: []
 headers:

@@ -1,0 +1,10 @@
+_id: ut_d0169f007a384679821a61fac4e27aae
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1673004013281
+created: 1673004002009
+requestId: req_4ca99a5721984faaa9a2389f7b69c366
+name: Can List Orders (as Manager)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

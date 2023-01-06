@@ -1,10 +1,10 @@
-_id: req_18f3ca096a52462eb0d1c6bc1c36ccbb
+_id: req_3e56000b38374bb39b2655b89da484fd
 type: Request
-parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672986212295
-created: 1672657658810
-url: "{{ _.basePath }}/api/groups/manager/users"
-name: Returns all managers (as Admin)
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1672987546918
+created: 1672759041935
+url: "{{ _.basePath }}/api/orders"
+name: Order List (as Delivery Crew)
 description: ""
 method: GET
 body: {}
@@ -13,8 +13,9 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.adminAuthToken }}"
-metaSortKey: -1672418612813
+  token: "{{ _.deliveryAuthToken }}"
+  disabled: false
+metaSortKey: -1672698777825.625
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

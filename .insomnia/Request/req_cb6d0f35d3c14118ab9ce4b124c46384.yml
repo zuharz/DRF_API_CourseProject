@@ -1,7 +1,7 @@
 _id: req_cb6d0f35d3c14118ab9ce4b124c46384
 type: Request
-parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658820
+parentId: fld_5dc5d2004f62453a99564703763d8b2f
+modified: 1672937383976
 created: 1672657658820
 url: "{{ _.basePath }}/api/users/"
 name: Create New User
@@ -12,7 +12,7 @@ body:
   text: |-
     {
     	"username":
-    		"SampleUser",
+    		"sampleUser1",
     	"password":
     		"{{ _.customerPassword }}"
     }
@@ -21,7 +21,7 @@ headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1672655311990
+metaSortKey: -1672418613013
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

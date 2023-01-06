@@ -1,0 +1,10 @@
+_id: ut_7d08913f1a4e468f930ff0a5ab56f400
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1673004459640
+created: 1673004441022
+requestId: req_40c1e392d4ac4677b5c849bbb8dede0f
+name: Cat set Delivery Crew to the Order (as Manager)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

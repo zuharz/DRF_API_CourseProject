@@ -1,7 +1,7 @@
 _id: req_2e53549cc3e5410aa8b545f1fc4186bc
 type: Request
-parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658819
+parentId: fld_e7869b47681644239575ff3a4341d861
+modified: 1673003227048
 created: 1672657658819
 url: "{{ _.basePath }}/api/menu-items"
 name: "Menu Item: Create (as Admin)"
@@ -12,9 +12,9 @@ body:
   text: |-
     {
     	"title": "Caesar Salad by {{ _.adminUsername }}",
-    	"price": "7",
+    	"price": "5.35",
     	"featured": false,
-    	"category_id": 1
+    	"category": 1
     }
 parameters: []
 headers:
