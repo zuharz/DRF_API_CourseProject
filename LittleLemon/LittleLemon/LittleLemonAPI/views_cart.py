@@ -10,10 +10,10 @@ from .models import Cart
 from .permissions import IsCustomerUser, IsManagerOrAdminUser
 from .serializers import CartSerializer
 
-class CartItemsView(APIView):
+class CartGetPostDelete(APIView):
     permission_classes = (IsCustomerUser,)
     # Returns current items in the cart for the current user token
-    def get(self, request: Request, format=None):
+    def get(self, request: Request, format=None) -> Response:
         
         queryset = Cart.objects.filter(user = request.user)
         serializer = CartSerializer(queryset, many=True)
@@ -21,7 +21,7 @@ class CartItemsView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     # Adds the menu item to the cart. Sets the authenticated user as the user id for these cart items
-    def post(self, request, format=None):
+    def post(self, request, format=None) -> Response:
         try:
             serializer = CartSerializer(data=request.data, context={'request': request})
             serializer.is_valid(raise_exception=True)
@@ -31,7 +31,7 @@ class CartItemsView(APIView):
             return Response(f"Can't add items to the cart due to the error {e}", status.HTTP_400_BAD_REQUEST)
     
     # Deletes all menu items created by the current user token
-    def delete(self, request):
+    def delete(self, request) -> Response:
         try:
             cartItems = Cart.objects.filter(user = request.user)
             

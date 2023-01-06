@@ -1,23 +1,42 @@
-from email.headerregistry import Group
-from tokenize import Double
-from unicodedata import decimal
 from rest_framework import serializers
-from rest_framework.validators import UniqueTogetherValidator 
 from django.contrib.auth.models import User, Group
-import bleach
+from django.conf import settings
 
-from .models import Category, MenuItem, Cart, Order, OrderItem
+from .models import Category, MenuItem, Cart
 
 class GroupNameField(serializers.RelatedField):
     def to_representation(self, value):
         # Return the group name
         return value.name
 
-class UserSerializer(serializers.ModelSerializer):
+class UserWithGroupSerializer(serializers.ModelSerializer):
     groups = GroupNameField(many=True, read_only=True)
     class Meta:
         model = User
         fields = ('id', 'username', 'email', 'first_name', 'last_name', 'groups')
+        
+class UserAddToGroupSerializer(serializers.ModelSerializer):
+    groups = GroupNameField(many=True, read_only=True)
+    user_id = serializers.IntegerField(write_only=True)
+    class Meta:
+        model = User
+        fields = ('user_id', 'id', 'username', 'email', 'groups')
+        read_only_fields = ('username','email', 'groups')
+        
+    def create(self, validated_data):
+        # Retrieve the user from the request payload        
+        userId = validated_data['user_id']
+        user = User.objects.filter(pk=userId).first()
+        if(user is None):
+            raise serializers.ValidationError(f"User with id {userId} can't be found")
+        
+        groupName = self.context['groupName']
+        # Assign user to the target group
+        group = Group.objects.get(name=groupName)
+        user.groups.add(group)
+        user.save()
+        
+        return user
 
 class CategorySerializer (serializers.ModelSerializer):
     class Meta:
@@ -25,15 +44,14 @@ class CategorySerializer (serializers.ModelSerializer):
         fields = ['id','slug','title']
 
 class MenuItemSerializer(serializers.ModelSerializer):
-    category_id = serializers.IntegerField(write_only=True)
-    category = CategorySerializer(read_only=True)
+    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())#CategorySerializer(read_only=True)
     
     class Meta():
         model = MenuItem
-        fields = ['id','title','price','featured', 'category', 'category_id']
+        fields = ['id','title','price','featured', 'category']
         
 class CartSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user = UserWithGroupSerializer(read_only=True)
     price = serializers.DecimalField(max_digits=6, decimal_places=2, read_only=True)
     
     class Meta:
@@ -46,9 +64,7 @@ class CartSerializer(serializers.ModelSerializer):
             }
     
     def create(self, validated_data):
-        #set current logged in user 
-        request = self.context['request']
-        user = request.user
+        user = self.context['request'].user
         validated_data['user'] = user
         #calculate
         price = self.__calculatePrice(validated_data['quantity'], validated_data['unit_price'])
@@ -57,3 +73,9 @@ class CartSerializer(serializers.ModelSerializer):
     
     def __calculatePrice(self, quantity, unit_price):
         return quantity * unit_price
+
+
+
+
+        
+

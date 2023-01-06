@@ -1,18 +1,18 @@
-from rest_framework.permissions import BasePermission, IsAdminUser
+from rest_framework.permissions import BasePermission
 from rest_framework.request import Request
-from django.conf import settings
+from django.contrib.auth.models import User
 
 class IsManagerUser(BasePermission):
     def has_permission(self, request : Request, view):
         return bool(
-            request.user and request.user.is_authenticated and request.user.groups.filter(name='Manager').exists()
+            request.user and request.user.is_authenticated and IsUserInManagerGroup(request.user)
         )
 
 class IsDeliveryCrewUser(BasePermission):
     def has_permission(self, request : Request, view):
         return bool(
             request.user and request.user.is_authenticated and 
-            request.user.groups.filter(name='Delivery crew').exists()
+            IsUserInDeliveryCrewGroup(request.user)
         )
 
 class IsCustomerUser(BasePermission):
@@ -25,5 +25,11 @@ class IsManagerOrAdminUser(BasePermission):
         return bool( 
             request.user and 
             request.user.is_authenticated and 
-            (request.user.groups.filter(name='Manager').exists() or request.user.is_staff)
+            (IsUserInManagerGroup(request.user) or request.user.is_superuser)
         )
+    
+def IsUserInManagerGroup(user) -> bool:
+    return bool( user.groups.filter(name='Manager').exists() )
+
+def IsUserInDeliveryCrewGroup(user, ) -> bool:
+    return bool( user.groups.filter(name='Delivery crew').exists() )
