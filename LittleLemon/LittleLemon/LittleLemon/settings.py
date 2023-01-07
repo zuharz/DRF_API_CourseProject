@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'rest_framework.authtoken', #required for enabling token-based authentication
     'djoser',#(!)keep after rest_framework.authtoken
     'LittleLemonAPI',
@@ -53,6 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'LittleLemon.urls'
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
 
 TEMPLATES = [
     {
@@ -135,7 +142,7 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE':4,
     'DEFAULT_AUTHENTICATION_CLASSES' : [
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication'
@@ -145,12 +152,14 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/minute',
-        'user': '10/minute',
-        'customCallsPerMinute' : '3/minute',
+        'anon': '20/minute',
+        'user': '100/minute',
     }
 }
 
 DJOSER = {
-    'USER_ID_FIELD' : 'username'
+    'USER_ID_FIELD' : 'id'
 }
+
+LEMON_GROUP_MANAGER = "Manager"
+LEMON_GROUP_DELIVERY = "Delivery crew"

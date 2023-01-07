@@ -1,3 +1,20 @@
-superuser credentials below
-login: admin
-password: 123#!
+Dear reviewer, 
+please find the following user and passwords below.
+For you convenience while testing, 
+IDs of the users are also provided, so you can use them as well where needed.
+
+admin Username: admin
+admin Password": 123#!
+id: 1
+
+manager Username: manager
+manager Password: 12345678#!
+id: 5
+
+delivery Username: delivery
+delivery Password: 12345678#!
+id: 9
+
+customer Username: customer1
+customer Password: 12345678#!
+id: 7
