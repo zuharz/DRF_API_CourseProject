@@ -1,0 +1,10 @@
+_id: ut_9383cb5bd513475f97d6cca82017a0a1
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673083320709
+created: 1673029075807
+requestId: req_ceb132fd632844d6917d66c981905107
+name: If the delivery crew can update an order as delivered
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

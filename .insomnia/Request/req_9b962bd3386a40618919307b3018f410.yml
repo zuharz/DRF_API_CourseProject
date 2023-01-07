@@ -1,26 +1,29 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_9b962bd3386a40618919307b3018f410
 type: Request
-parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+parentId: fld_5dc5d2004f62453a99564703763d8b2f
+modified: 1673083036938
+created: 1673015041232
+url: "{{ _.basePath }}/api/groups/delivery-crew/users"
+name: User Assign to Delivery (as Manager)
 description: ""
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"username" : "{{ _.deliveryUsername }}"
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
-  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
+  token: "{% response 'body', 'req_7aff9e7271d448a1aff0e88e0fae52be',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
   disabled: false
-metaSortKey: -1672381400757
+metaSortKey: -1672418612944.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,0 +1,10 @@
+_id: ut_aa42267ab9374f878510a9eebe4567f7
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673082404677
+created: 1673023589571
+requestId: req_6df9fff0b2ba4b328f5df6728ce100d9
+name: Assign "manager" user to the manager group
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

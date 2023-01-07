@@ -1,0 +1,10 @@
+_id: ut_48bb5aec6c7a4a1b802baaab2cb80030
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673027240378
+created: 1673027229876
+requestId: req_e5ac93cbca024098a48ec5a0922fc466
+name: If customers can browse all menu items
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

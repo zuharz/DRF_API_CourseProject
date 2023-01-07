@@ -1,0 +1,10 @@
+_id: ut_43f0f9cc812747fbb5de174c393fdc0a
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1673004594135
+created: 1673000987884
+requestId: req_3bcce4a0fb7a4157a575dc31592d675e
+name: Can List Menu Items By Category 2 (as Customer)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

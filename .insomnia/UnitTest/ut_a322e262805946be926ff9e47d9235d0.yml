@@ -1,0 +1,10 @@
+_id: ut_a322e262805946be926ff9e47d9235d0
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673083042810
+created: 1673024731264
+requestId: req_608783fd527e43fd9ba26c2cc505687a
+name: If the manager can update the item of the day
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

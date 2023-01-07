@@ -1,0 +1,10 @@
+_id: ut_064d3c65bc9140e0a18935de5076a87b
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673027075108
+created: 1673027059499
+requestId: req_188f160837834141b00432be693dc602
+name: If customers can browse all categories
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

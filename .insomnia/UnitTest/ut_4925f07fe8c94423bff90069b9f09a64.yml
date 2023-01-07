@@ -1,0 +1,10 @@
+_id: ut_4925f07fe8c94423bff90069b9f09a64
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673083390637
+created: 1673028597884
+requestId: req_c61da14711fc428cb8d88a1a397b7a59
+name: Test if customers can place orders
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

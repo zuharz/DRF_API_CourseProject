@@ -1,17 +1,17 @@
-_id: req_5ba59b8a82234aba9b354d3a42d3fee4
+_id: req_ceb132fd632844d6917d66c981905107
 type: Request
-parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673024868046
-created: 1672657658822
-url: "{{ _.basePath }}/api/menu-items/1/"
-name: "Menu Item: Create (as Manager)"
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1673084758164
+created: 1673004362655
+url: "{{ _.basePath }}/api/orders/16"
+name: Order Update to "Delivered" (as Delivery Crew)
 description: ""
 method: PATCH
 body:
   mimeType: application/json
   text: |-
     {
-    	"featured": true
+    	"status": true
     }
 parameters: []
 headers:
@@ -19,10 +19,10 @@ headers:
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.managerAuthToken }}"
   prefix: Token
-  disabled: false
-metaSortKey: -1672381400775.75
+  token: "{% response 'body', 'req_3c11e7442e784fa2a35348b92825d8f4',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
+metaSortKey: -1672723756443.2812
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

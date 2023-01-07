@@ -1,20 +1,19 @@
-_id: req_e37251019a8d46bba6c7c0ae628c5084
+_id: req_65ed6076b0354495ba88179c7faa0a04
 type: Request
-parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003271413
-created: 1672657658823
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: Create (as Customer or Del.Crew)"
+parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
+modified: 1673014730008
+created: 1673014696566
+url: "{{ _.basePath }}/api/cart"
+name: Cart Add Review 1
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"title": "Caesar Salad by {{ _.customerUsername }}",
-    	"price": "9.55",
-    	"featured": false,
-    	"category": 1
+    	"menuitem": 2,
+    	"quantity": 3,
+    	"unit_price": 1.15
     }
 parameters: []
 headers:
@@ -22,10 +21,10 @@ headers:
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.customerAuthToken }}"
   prefix: Token
+  token: "{{ _.customerAuthToken }}"
   disabled: false
-metaSortKey: -1672381400763.25
+metaSortKey: -1672678794922.125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

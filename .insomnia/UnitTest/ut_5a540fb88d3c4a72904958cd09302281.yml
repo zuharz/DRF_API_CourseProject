@@ -1,0 +1,10 @@
+_id: ut_5a540fb88d3c4a72904958cd09302281
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673024018679
+created: 1673024008291
+requestId: req_18f3ca096a52462eb0d1c6bc1c36ccbb
+name: Can access the manager group with an admin token
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

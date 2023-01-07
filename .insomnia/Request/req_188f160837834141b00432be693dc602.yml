@@ -1,26 +1,21 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_188f160837834141b00432be693dc602
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+modified: 1673026987898
+created: 1672992667264
+url: "{{ _.basePath }}/api/categories"
+name: Category List All (Customer)
 description: ""
 method: GET
-body:
-  mimeType: application/json
-  text: ""
+body: {}
 parameters: []
-headers:
-  - name: Content-Type
-    value: application/json
+headers: []
 authentication:
   type: bearer
+  prefix: Token
   token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
-  prefix: Token
-  disabled: false
-metaSortKey: -1672381400757
+metaSortKey: -1672992667264
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

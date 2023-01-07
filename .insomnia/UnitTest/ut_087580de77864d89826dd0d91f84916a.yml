@@ -1,0 +1,10 @@
+_id: ut_087580de77864d89826dd0d91f84916a
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673028200606
+created: 1673028193462
+requestId: req_bdaa7b29a162432bb3e57dcbfd7b0f44
+name: If customers can see previously added items in the cart
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

@@ -1,0 +1,10 @@
+_id: ut_445721d9c5514d88a13f6c3beec79072
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673026778127
+created: 1673025815057
+requestId: req_cb6d0f35d3c14118ab9ce4b124c46384
+name: If customers can register
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

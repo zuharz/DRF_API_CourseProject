@@ -1,0 +1,33 @@
+_id: req_40c1e392d4ac4677b5c849bbb8dede0f
+type: Request
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1673084661901
+created: 1672840449930
+url: "{{ _.basePath }}/api/orders/16"
+name: Order Set Delivery Crew (as Manager)
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"delivery_crew": 8,
+    	"status": false
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Token
+  token: "{% response 'body', 'req_7aff9e7271d448a1aff0e88e0fae52be',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
+metaSortKey: -1672728752166.8125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
