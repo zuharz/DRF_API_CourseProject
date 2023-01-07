@@ -1,20 +1,18 @@
 _id: req_cb6d0f35d3c14118ab9ce4b124c46384
 type: Request
 parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672937383976
+modified: 1673026742728
 created: 1672657658820
 url: "{{ _.basePath }}/api/users/"
-name: Create New User
+name: "User: Register"
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"username":
-    		"sampleUser1",
-    	"password":
-    		"{{ _.customerPassword }}"
+    	"username": "{{ _.customerUsername }}",	
+    	"password": "{{ _.customerPassword }}"
     }
 parameters: []
 headers:

@@ -1,20 +1,17 @@
 _id: req_5ba59b8a82234aba9b354d3a42d3fee4
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003258738
+modified: 1673024868046
 created: 1672657658822
-url: "{{ _.basePath }}/api/menu-items"
+url: "{{ _.basePath }}/api/menu-items/1/"
 name: "Menu Item: Create (as Manager)"
 description: ""
-method: POST
+method: PATCH
 body:
   mimeType: application/json
   text: |-
     {
-    	"title": "Caesar Salad by {{ _.managerUsername }}",
-    	"price": "7.75",
-    	"featured": false,
-    	"category": 1
+    	"featured": true
     }
 parameters: []
 headers:

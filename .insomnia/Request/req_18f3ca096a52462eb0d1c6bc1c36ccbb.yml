@@ -1,10 +1,10 @@
 _id: req_18f3ca096a52462eb0d1c6bc1c36ccbb
 type: Request
 parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672986212295
+modified: 1673023963069
 created: 1672657658810
 url: "{{ _.basePath }}/api/groups/manager/users"
-name: Returns all managers (as Admin)
+name: List all Managers (as Admin)
 description: ""
 method: GET
 body: {}

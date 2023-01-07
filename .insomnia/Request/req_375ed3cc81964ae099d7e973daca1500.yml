@@ -1,10 +1,10 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_375ed3cc81964ae099d7e973daca1500
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+modified: 1673027491169
+created: 1673027378889
+url: "{{ _.basePath }}/api/menu-items?search=desserts"
+name: "Menu Item: Search By Category (as Customer)"
 description: ""
 method: GET
 body:
@@ -20,7 +20,7 @@ authentication:
     'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
   disabled: false
-metaSortKey: -1672381400757
+metaSortKey: -1672381400755.4375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

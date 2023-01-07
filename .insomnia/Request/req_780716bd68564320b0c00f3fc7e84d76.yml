@@ -1,26 +1,28 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_780716bd68564320b0c00f3fc7e84d76
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+modified: 1673082493440
+created: 1673008199512
+url: "{{ _.basePath }}/api/categories/"
+name: Category Create (as Admin)
 description: ""
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"slug": "catergory-test",
+    	"title": "Test Category"
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
-  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
-    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
-  disabled: false
-metaSortKey: -1672381400757
+  token: "{{ _.adminAuthToken }}"
+metaSortKey: -1672875696886
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

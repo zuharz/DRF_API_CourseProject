@@ -1,0 +1,10 @@
+_id: ut_5f3dc81dd103404285a8a722677db5fc
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673024417512
+created: 1673024398990
+requestId: req_780716bd68564320b0c00f3fc7e84d76
+name: Test if the admin can add categories
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

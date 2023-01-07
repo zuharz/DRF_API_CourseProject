@@ -1,26 +1,30 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_65ed6076b0354495ba88179c7faa0a04
 type: Request
-parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
+modified: 1673014730008
+created: 1673014696566
+url: "{{ _.basePath }}/api/cart"
+name: Cart Add Review 1
 description: ""
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"menuitem": 2,
+    	"quantity": 3,
+    	"unit_price": 1.15
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
-  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
-    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
+  token: "{{ _.customerAuthToken }}"
   disabled: false
-metaSortKey: -1672381400757
+metaSortKey: -1672678794922.125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

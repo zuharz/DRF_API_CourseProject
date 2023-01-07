@@ -1,7 +1,7 @@
 _id: req_bdaa7b29a162432bb3e57dcbfd7b0f44
 type: Request
 parentId: fld_53c1a0c9b7d6459fbd7b083b3f1c473a
-modified: 1672770920978
+modified: 1673028223847
 created: 1672676557930
 url: "{{ _.basePath }}/api/cart/menu-items"
 name: Cart List by Customer
@@ -13,7 +13,8 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.customerAuthToken }}"
+  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   disabled: false
 metaSortKey: -1672678794912.75
 isPrivate: false

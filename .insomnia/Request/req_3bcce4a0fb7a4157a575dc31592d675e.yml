@@ -1,9 +1,9 @@
 _id: req_3bcce4a0fb7a4157a575dc31592d675e
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673000964815
+modified: 1673008385533
 created: 1673000907979
-url: "{{ _.basePath }}/api/menu-items/category/2"
+url: "{{ _.basePath }}/api/menu-items/category/1"
 name: Menu Items by Category (as Customer)
 description: ""
 method: GET

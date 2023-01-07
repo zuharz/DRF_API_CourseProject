@@ -1,29 +1,28 @@
 _id: req_6df9fff0b2ba4b328f5df6728ce100d9
 type: Request
 parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1672986203581
+modified: 1673082386797
 created: 1672657658812
 url: "{{ _.basePath }}/api/groups/manager/users"
 name: User Add to Manager Group (as Admin)
 description: ""
 method: POST
 body:
-  mimeType: multipart/form-data
-  params:
-    - id: pair_1ef3aa56057a4cbb9a4717d513df1e51
-      name: user_id
-      value: "5"
-      description: ""
-      disabled: false
+  mimeType: application/json
+  text: |-
+    {
+    	"username" : "{{ _.managerUsername }}"
+    }
 parameters: []
 headers:
   - name: Content-Type
-    value: multipart/form-data
+    value: application/json
 authentication:
   type: bearer
   token: "{{ _.adminAuthToken }}"
   prefix: Token
-metaSortKey: -1672418612888
+  disabled: false
+metaSortKey: -1672418612950.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

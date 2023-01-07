@@ -1,7 +1,7 @@
 _id: req_3e56000b38374bb39b2655b89da484fd
 type: Request
 parentId: fld_050f1248e3f84ec491aacf6a50784bbf
-modified: 1672987546918
+modified: 1673084302135
 created: 1672759041935
 url: "{{ _.basePath }}/api/orders"
 name: Order List (as Delivery Crew)
@@ -13,7 +13,8 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.deliveryAuthToken }}"
+  token: "{% response 'body', 'req_3c11e7442e784fa2a35348b92825d8f4',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   disabled: false
 metaSortKey: -1672698777825.625
 isPrivate: false

@@ -1,19 +1,27 @@
 _id: req_c61da14711fc428cb8d88a1a397b7a59
 type: Request
 parentId: fld_050f1248e3f84ec491aacf6a50784bbf
-modified: 1672987434834
+modified: 1673083370243
 created: 1672758895873
 url: "{{ _.basePath }}/api/orders"
 name: Order Create (as Customer)
 description: ""
 method: POST
-body: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"date": "2022-11-16"
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.customerAuthToken }}"
+  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
 metaSortKey: -1672718760719.75
 isPrivate: false
 settingStoreCookies: true

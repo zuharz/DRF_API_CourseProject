@@ -1,0 +1,10 @@
+_id: ut_101210da562146ccb2f60cc952da8e40
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673083538088
+created: 1673025337052
+requestId: req_9b962bd3386a40618919307b3018f410
+name: if the manager can assign users to the delivery crew
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);

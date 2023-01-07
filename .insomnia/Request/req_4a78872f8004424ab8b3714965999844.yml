@@ -1,0 +1,21 @@
+_id: req_4a78872f8004424ab8b3714965999844
+type: Request
+parentId: fld_e7869b47681644239575ff3a4341d861
+modified: 1673014946912
+created: 1673014928641
+url: http://127.0.0.1:8000/api/menu-items?search=Icecream
+name: Search Item By CategoryName
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1673014928641
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

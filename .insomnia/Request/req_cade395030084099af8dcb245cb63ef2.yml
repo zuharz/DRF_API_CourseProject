@@ -1,0 +1,21 @@
+_id: req_cade395030084099af8dcb245cb63ef2
+type: Request
+parentId: fld_e7869b47681644239575ff3a4341d861
+modified: 1673014904313
+created: 1673014895191
+url: http://127.0.0.1:8000/api/menu-items?ordering=price
+name: Order By Price
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1673014895191
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

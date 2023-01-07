@@ -1,9 +1,9 @@
 _id: req_2e53549cc3e5410aa8b545f1fc4186bc
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003227048
+modified: 1673082737546
 created: 1672657658819
-url: "{{ _.basePath }}/api/menu-items"
+url: "{{ _.basePath }}/api/menu-items/"
 name: "Menu Item: Create (as Admin)"
 description: ""
 method: POST
@@ -14,7 +14,7 @@ body:
     	"title": "Caesar Salad by {{ _.adminUsername }}",
     	"price": "5.35",
     	"featured": false,
-    	"category": 1
+    	"category": "Category 1"
     }
 parameters: []
 headers:
@@ -22,7 +22,8 @@ headers:
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.adminAuthToken }}"
+  token: "{% response 'body', 'req_4827f7db92c343888cb10861bf377ec6',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
   disabled: false
 metaSortKey: -1672381400800.75

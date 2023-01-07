@@ -1,9 +1,9 @@
 _id: req_188f160837834141b00432be693dc602
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003419173
+modified: 1673026987898
 created: 1672992667264
-url: "{{ _.basePath }}/api/category"
+url: "{{ _.basePath }}/api/categories"
 name: Category List All (Customer)
 description: ""
 method: GET
@@ -13,7 +13,8 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.customerAuthToken }}"
+  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
 metaSortKey: -1672992667264
 isPrivate: false
 settingStoreCookies: true

@@ -1,0 +1,10 @@
+_id: ut_c9a177d7e44b4ef7b90d95a495b8caf6
+type: UnitTest
+parentId: uts_777c5fc711b84dbe944d33e2157de7ba
+modified: 1673083146652
+created: 1673028163555
+requestId: req_b7dd73dbcbdc4888896482a20601664c
+name: If customers can add menu items to the cart
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);
