@@ -1,20 +1,18 @@
-_id: req_e37251019a8d46bba6c7c0ae628c5084
+_id: req_780716bd68564320b0c00f3fc7e84d76
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003271413
-created: 1672657658823
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: Create (as Customer or Del.Crew)"
+modified: 1673082493440
+created: 1673008199512
+url: "{{ _.basePath }}/api/categories/"
+name: Category Create (as Admin)
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"title": "Caesar Salad by {{ _.customerUsername }}",
-    	"price": "9.55",
-    	"featured": false,
-    	"category": 1
+    	"slug": "catergory-test",
+    	"title": "Test Category"
     }
 parameters: []
 headers:
@@ -22,10 +20,9 @@ headers:
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.customerAuthToken }}"
   prefix: Token
-  disabled: false
-metaSortKey: -1672381400763.25
+  token: "{{ _.adminAuthToken }}"
+metaSortKey: -1672875696886
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

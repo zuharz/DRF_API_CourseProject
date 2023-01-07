@@ -1,0 +1,10 @@
+_id: ut_63d198109662437e99061abe77c316a2
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1673003847164
+created: 1672992747930
+requestId: req_188f160837834141b00432be693dc602
+name: Can List Categories (Customer)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

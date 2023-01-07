@@ -1,28 +1,22 @@
-_id: req_6df9fff0b2ba4b328f5df6728ce100d9
+_id: req_3c11e7442e784fa2a35348b92825d8f4
 type: Request
 parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1673082386797
-created: 1672657658812
-url: "{{ _.basePath }}/api/groups/manager/users"
-name: User Add to Manager Group (as Admin)
+modified: 1673017042347
+created: 1672820488889
+url: "{{ _.basePath }}/token/login"
+name: Login As Delivery
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: |-
-    {
-    	"username" : "{{ _.managerUsername }}"
-    }
+  text: '{"username": "{{ _.deliveryUsername }}", "password": "{{
+    _.customerPassword }}"}'
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-authentication:
-  type: bearer
-  token: "{{ _.adminAuthToken }}"
-  prefix: Token
-  disabled: false
-metaSortKey: -1672418612950.5
+authentication: {}
+metaSortKey: -1672418612931.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

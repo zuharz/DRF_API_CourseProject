@@ -1,26 +1,28 @@
-_id: req_e5ac93cbca024098a48ec5a0922fc466
+_id: req_c61da14711fc428cb8d88a1a397b7a59
 type: Request
-parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673027248790
-created: 1672673424157
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: List All (as Customer)"
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1673083370243
+created: 1672758895873
+url: "{{ _.basePath }}/api/orders"
+name: Order Create (as Customer)
 description: ""
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"date": "2022-11-16"
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
+  prefix: Token
   token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
-  prefix: Token
-  disabled: false
-metaSortKey: -1672381400757
+metaSortKey: -1672718760719.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

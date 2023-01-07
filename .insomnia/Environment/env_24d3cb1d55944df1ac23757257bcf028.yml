@@ -1,26 +1,28 @@
 _id: env_24d3cb1d55944df1ac23757257bcf028
 type: Environment
 parentId: env_39135a9fce1940628bdf41154952fb69
-modified: 1672674311552
+modified: 1673081960357
 created: 1672657819948
 name: LittleLemonDRF
 data:
   basePath: http://127.0.0.1:8000
   baseAuthPath: auth
   adminUsername: admin
-  adminPassword: 123#!
-  adminAuthToken: "{% response 'body', 'req_c40059e0804b46b3a24aabb6db5d7783',
-    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+  adminPassword: JR7h5QXkj@!Z&od*!rYWLlD
+  adminAuthToken: "{% response 'body', 'req_4827f7db92c343888cb10861bf377ec6',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   managerUsername: manager
   managerPassword: 12345678#!
   managerAuthToken: "{% response 'body', 'req_5526ce1d872c4f58a2717bb3e48c3c27',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
-  customerUsername: customer1
+  deliveryUsername: delivery_test
+  deliveryPassword: 12345678#!
+  deliveryAuthToken: "{% response 'body', 'req_3c11e7442e784fa2a35348b92825d8f4',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
+  customerUsername: customer_test
   customerPassword: 12345678#!
   customerAuthToken: "{% response 'body', 'req_031fa56ea4ac4cd0a9b9f622dac74876',
     'b64::JC5hdXRoX3Rva2Vu::46b', 'never', 60 %}"
-  menuItemId: "{% response 'body', 'req_5ba59b8a82234aba9b354d3a42d3fee4',
-    'b64::JC5pZA==::46b', 'never', 60 %}"
 dataPropertyOrder:
   "&":
     - basePath
@@ -31,10 +33,12 @@ dataPropertyOrder:
     - managerUsername
     - managerPassword
     - managerAuthToken
+    - deliveryUsername
+    - deliveryPassword
+    - deliveryAuthToken
     - customerUsername
     - customerPassword
     - customerAuthToken
-    - menuItemId
 color: null
 isPrivate: false
 metaSortKey: 1672319913446

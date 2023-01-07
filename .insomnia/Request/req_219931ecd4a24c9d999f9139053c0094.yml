@@ -1,10 +1,10 @@
 _id: req_219931ecd4a24c9d999f9139053c0094
 type: Request
-parentId: wrk_50a0bc6b0a354773a6921f4d4cb1604d
-modified: 1672657658813
+parentId: fld_5dc5d2004f62453a99564703763d8b2f
+modified: 1672986225129
 created: 1672657658813
-url: "{{ _.basePath }}/api/groups/manager/users/5"
-name: Remove user from the manager group
+url: "{{ _.basePath }}/api/groups/delivery-crew/users/5"
+name: Remove user from Delivery Crew (as Manager)
 description: ""
 method: DELETE
 body:
@@ -16,9 +16,9 @@ headers:
     value: multipart/form-data
 authentication:
   type: bearer
-  token: "{{ _.adminAuthToken }}"
+  token: "{{ _.managerAuthToken }}"
   prefix: Token
-metaSortKey: -1672418560983.75
+metaSortKey: -1672418612613
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

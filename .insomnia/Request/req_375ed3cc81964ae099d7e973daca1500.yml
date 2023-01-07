@@ -1,31 +1,26 @@
-_id: req_e37251019a8d46bba6c7c0ae628c5084
+_id: req_375ed3cc81964ae099d7e973daca1500
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1673003271413
-created: 1672657658823
-url: "{{ _.basePath }}/api/menu-items"
-name: "Menu Item: Create (as Customer or Del.Crew)"
+modified: 1673027491169
+created: 1673027378889
+url: "{{ _.basePath }}/api/menu-items?search=desserts"
+name: "Menu Item: Search By Category (as Customer)"
 description: ""
-method: POST
+method: GET
 body:
   mimeType: application/json
-  text: |-
-    {
-    	"title": "Caesar Salad by {{ _.customerUsername }}",
-    	"price": "9.55",
-    	"featured": false,
-    	"category": 1
-    }
+  text: ""
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.customerAuthToken }}"
+  token: "{% response 'body', 'req_f6aef3d11ee040eabb165d8994699050',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
   prefix: Token
   disabled: false
-metaSortKey: -1672381400763.25
+metaSortKey: -1672381400755.4375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

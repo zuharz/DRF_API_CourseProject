@@ -1,10 +1,10 @@
-_id: req_18f3ca096a52462eb0d1c6bc1c36ccbb
+_id: req_17665285ae5345e5982e0496ceb21421
 type: Request
-parentId: fld_5dc5d2004f62453a99564703763d8b2f
-modified: 1673023963069
-created: 1672657658810
-url: "{{ _.basePath }}/api/groups/manager/users"
-name: List all Managers (as Admin)
+parentId: fld_050f1248e3f84ec491aacf6a50784bbf
+modified: 1672853536286
+created: 1672834522638
+url: "{{ _.basePath }}/api/orders/3"
+name: Order By Id
 description: ""
 method: GET
 body: {}
@@ -13,8 +13,8 @@ headers: []
 authentication:
   type: bearer
   prefix: Token
-  token: "{{ _.adminAuthToken }}"
-metaSortKey: -1672418612813
+  token: "{{ _.customerAuthToken }}"
+metaSortKey: -1672738743613.875
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

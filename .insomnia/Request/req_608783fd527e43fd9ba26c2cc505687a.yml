@@ -1,27 +1,30 @@
-_id: req_ceab5e6e646d45a0b7f6354349c58005
+_id: req_608783fd527e43fd9ba26c2cc505687a
 type: Request
 parentId: fld_e7869b47681644239575ff3a4341d861
-modified: 1672986156188
-created: 1672669277880
+modified: 1673082845850
+created: 1673024894820
 url: "{{ _.basePath }}/api/menu-items/{% response 'body',
-  'req_e5ac93cbca024098a48ec5a0922fc466', 'b64::JC5yZXN1bHRzWzBdLmlk::46b',
-  'always', 60 %}"
-name: "Menu Item: Delete (as Manager)"
+  'req_2e53549cc3e5410aa8b545f1fc4186bc', 'b64::JC5pZA==::46b', 'always', 60
+  %}/"
+name: "Menu Item: set Featured (as Manager)"
 description: ""
-method: DELETE
+method: PATCH
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"featured": true
+    }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication:
   type: bearer
-  token: "{{ _.managerAuthToken }}"
   prefix: Token
-  disabled: false
-metaSortKey: -1672381400750.75
+  token: "{% response 'body', 'req_7aff9e7271d448a1aff0e88e0fae52be',
+    'b64::JC5hdXRoX3Rva2Vu::46b', 'always', 60 %}"
+metaSortKey: -1673024894820
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

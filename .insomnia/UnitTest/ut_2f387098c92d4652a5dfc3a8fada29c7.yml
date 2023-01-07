@@ -1,0 +1,10 @@
+_id: ut_2f387098c92d4652a5dfc3a8fada29c7
+type: UnitTest
+parentId: uts_3bdae35be22c49e6ae638d4e831e522c
+modified: 1673008308855
+created: 1673008287746
+requestId: req_780716bd68564320b0c00f3fc7e84d76
+name: Create Category (as Admin)
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);
