@@ -1,4 +1,5 @@
 # DRF_API_CourseProject
 META Back-End Developer REST API course final project implemented by Siarhei Sushynski
 
-Fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders. 
+Please, note - I am publishing this code exclusively for the purpose of demonstrating my source results to my future potential employers.
+Dear "future colleagues" studying on the same source, please, keep in mind that you'd better make all the course assignments by yourself for your own good and don't use this code to complete the course without getting deep understanding why and what has been done in this or that way.
